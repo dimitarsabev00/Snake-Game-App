@@ -23,6 +23,7 @@ const PlayArea = () => {
   const [gameOver, setGameOver] = useState(false);
   const [score, setScore] = useState(0);
 
+  const [music] = useState(new Audio("../src/assets/sounds/music.mp3"));
   const [move] = useState(new Audio("../src/assets/sounds/move.mp3"));
   const [foodSound] = useState(new Audio("../src/assets/sounds/food.mp3"));
   const [gameOverSound] = useState(
@@ -58,6 +59,8 @@ const PlayArea = () => {
     setDelay(timeDelay);
     setScore(0);
     setGameOver(false);
+    music.volume = 0.1;
+    music.play();
   }
 
   function checkCollision(head: number[]) {
@@ -93,6 +96,7 @@ const PlayArea = () => {
     if (checkCollision(newSnakeHead)) {
       setDelay(null);
       gameOverSound.play();
+      music.pause();
       setGameOver(true);
       handleSetScore();
     }
