@@ -23,6 +23,7 @@ const PlayArea = () => {
   const [gameOver, setGameOver] = useState(false);
   const [score, setScore] = useState(0);
 
+  const [foodSound] = useState(new Audio("../src/assets/sounds/food.mp3"));
   const [gameOverSound] = useState(
     new Audio("../src/assets/sounds/gameover.mp3")
   );
@@ -73,7 +74,9 @@ const PlayArea = () => {
     if (newSnake[0][0] === apple[0] && newSnake[0][1] === apple[1]) {
       let newApple = coord;
       setScore(score + 1);
+      foodSound.play();
       setApple(newApple);
+
       return true;
     }
     return false;
