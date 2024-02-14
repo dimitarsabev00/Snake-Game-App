@@ -1,0 +1,10 @@
+.container-app {
+  background-image: url("../src//assets//background-image-for-app.jpg");
+  min-height: 100vh;
+  background-size: 100vw 100vh;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
