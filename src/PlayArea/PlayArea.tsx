@@ -23,6 +23,10 @@ const PlayArea = () => {
   const [gameOver, setGameOver] = useState(false);
   const [score, setScore] = useState(0);
 
+  const [gameOverSound] = useState(
+    new Audio("../src/assets/sounds/gameover.mp3")
+  );
+
   useInterval(() => runGame(), delay);
   useEffect(() => {
     let fruit = document.getElementById("fruit") as HTMLCanvasElement;
@@ -84,6 +88,7 @@ const PlayArea = () => {
     newSnake.unshift(newSnakeHead);
     if (checkCollision(newSnakeHead)) {
       setDelay(null);
+      gameOverSound.play();
       setGameOver(true);
       handleSetScore();
     }
