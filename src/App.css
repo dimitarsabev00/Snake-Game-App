@@ -11,4 +11,8 @@
   margin: 0;
   padding: 0;
 }
-
+.container-app {
+  background-image: url("../src//assets//background-image-for-app.jpg");
+  width: 100vw;
+  height: 100vh;
+}
