@@ -79,6 +79,8 @@ const PlayArea = () => {
     if (newSnake[0][0] === apple[0] && newSnake[0][1] === apple[1]) {
       let newApple = coord;
       setScore(score + 1);
+      foodSound.volume = 0.3;
+
       foodSound.play();
       setApple(newApple);
 
@@ -96,8 +98,11 @@ const PlayArea = () => {
     newSnake.unshift(newSnakeHead);
     if (checkCollision(newSnakeHead)) {
       setDelay(null);
+
+      gameOverSound.volume = 0.3;
       gameOverSound.play();
       music.pause();
+      
       setGameOver(true);
       handleSetScore();
     }
@@ -110,20 +115,25 @@ const PlayArea = () => {
   function changeDirection(e: React.KeyboardEvent<HTMLDivElement>) {
     switch (e.key) {
       case "ArrowLeft":
+        move.volume = 0.3;
         move.play();
+
         setDirection([-1, 0]);
         break;
       case "ArrowUp":
+        move.volume = 0.3;
         move.play();
 
         setDirection([0, -1]);
         break;
       case "ArrowRight":
+        move.volume = 0.3;
         move.play();
 
         setDirection([1, 0]);
         break;
       case "ArrowDown":
+        move.volume = 0.3;
         move.play();
 
         setDirection([0, 1]);
