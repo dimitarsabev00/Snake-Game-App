@@ -1,0 +1,35 @@
+.playArea {
+  background: linear-gradient(rgb(170, 236, 170), rgb(236, 236, 167));
+  border: 2px solid black;
+  width: 685px;
+  height: 640px;
+}
+
+#fruit {
+  display: none;
+}
+
+.gameOver {
+  position: fixed;
+  top: 43.2%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 35px;
+}
+.playButton {
+  position: fixed;
+  top: 90%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  background: #502c7b;
+  border-radius: 1rem;
+  padding: 10px;
+  font-size: 0.9em;
+  font-family: "Press Start 2P", cursive;
+  font-weight: 700;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  cursor: pointer;
+}
