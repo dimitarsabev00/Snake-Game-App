@@ -23,6 +23,7 @@ const PlayArea = () => {
   const [gameOver, setGameOver] = useState(false);
   const [score, setScore] = useState(0);
 
+  const [move] = useState(new Audio("../src/assets/sounds/move.mp3"));
   const [foodSound] = useState(new Audio("../src/assets/sounds/food.mp3"));
   const [gameOverSound] = useState(
     new Audio("../src/assets/sounds/gameover.mp3")
@@ -104,15 +105,22 @@ const PlayArea = () => {
   function changeDirection(e: React.KeyboardEvent<HTMLDivElement>) {
     switch (e.key) {
       case "ArrowLeft":
+        move.play();
         setDirection([-1, 0]);
         break;
       case "ArrowUp":
+        move.play();
+
         setDirection([0, -1]);
         break;
       case "ArrowRight":
+        move.play();
+
         setDirection([1, 0]);
         break;
       case "ArrowDown":
+        move.play();
+
         setDirection([0, 1]);
         break;
     }
