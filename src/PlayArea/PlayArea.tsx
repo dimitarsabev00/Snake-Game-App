@@ -23,6 +23,7 @@ const PlayArea = () => {
   const [gameOver, setGameOver] = useState(false);
   const [score, setScore] = useState(0);
 
+  // All sound for the game
   const [music] = useState(new Audio("../src/assets/sounds/music.mp3"));
   const [move] = useState(new Audio("../src/assets/sounds/move.mp3"));
   const [foodSound] = useState(new Audio("../src/assets/sounds/food.mp3"));
