@@ -1,5 +1,5 @@
 import "./App.scss";
-import PlayArea from "./PlayArea/PlayArea";
+import PlayArea from "./components/PlayArea/PlayArea";
 
 const App = () => {
   return (

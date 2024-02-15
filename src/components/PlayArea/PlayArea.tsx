@@ -1,6 +1,6 @@
 import "./PlayArea.scss";
-import AppleLogo from "../assets/applePixels.png";
-import useInterval from "../useInterval";
+import AppleLogo from "../../assets/applePixels.png";
+import useInterval from "../../useInterval";
 import { useEffect, useRef, useState } from "react";
 import ScoreBox from "../ScoreBox/ScoreBox";
 
@@ -102,7 +102,7 @@ const PlayArea = () => {
       gameOverSound.volume = 0.3;
       gameOverSound.play();
       music.pause();
-      
+
       setGameOver(true);
       handleSetScore();
     }
