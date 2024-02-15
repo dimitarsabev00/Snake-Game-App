@@ -1,6 +1,6 @@
 import "./PlayArea.scss";
 import AppleLogo from "../../assets/applePixels.png";
-import useInterval from "../../useInterval";
+import useInterval from "../../hooks/useInterval";
 import { useEffect, useRef, useState } from "react";
 import ScoreBox from "../ScoreBox/ScoreBox";
 
